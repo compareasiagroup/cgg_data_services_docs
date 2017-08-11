@@ -41,7 +41,7 @@ import httplib2
 
 headers = {
   'Content-type': 'application/json',
-  'Usercity-Auth-Token': 'c1550bd0-e187-4bce-9044-846eb89cad8f'
+  'Usercity-Auth-Token': ''
   }
 
 payload = {
@@ -105,7 +105,7 @@ import httplib2
 
 headers = {
   'Content-type': 'application/json',
-  'Usercity-Auth-Token': 'c1550bd0-e187-4bce-9044-846eb89cad8f'
+  'Usercity-Auth-Token': ''
   }
 
 payload = {
