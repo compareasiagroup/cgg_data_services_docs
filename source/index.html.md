@@ -230,32 +230,37 @@ email OR phone | An application record will be created with email/phone informat
 vertical | Used to identify segmentation config
 locale | Used to identify segmentation config
 attributes/usercityEventName | not sure what is required-lixing
+providerCode | this is required
+providerName | this is required
+productCode | this is required
+productName | this is required
 tc_consent | has to be "true"
-attributes/funnel fiels | CRM have to receive funnel fields and value to display these information
+attributes/application_form/application form fields | CRM have to receive application form fields and value to display these information
 
 ### optional fields
 utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
 source url | a link for user to retrieve customer last access page and some related information
 
-## Generating a lead record
-
-A Lead record will be created in Leads Module when customer submit funnel (email/phone submit before apply button click). No update rule applies, the system will create a new record everytime.
-
-### Required Query Parameters for Initial Event
+### Required Query Parameters for Subsequent Event -updating an existing record
 
 Parameter | Description
 --------- | -----------
-email OR phone | A lead record will be created with email OR phone information 
+email| the new record need to have the same CGG ID as the record wishing to be updated (same email)  
 vertical | Used to identify segmentation config
 locale | Used to identify segmentation config
-attributes/usercityEventName | needs to be "postFromFunnel"
+attributes/usercityEventName | not sure what is required-lixing
+providerCode | this is required
+providerName | this is required
+productCode | this field should be the same as the record wishing to be updated
+productName | this is required
 tc_consent | has to be "true"
-attributes/funnel fields | all funnel fields and values need to be sent
+attributes/application_form/application form fields | CRM have to receive application form fields and value to display these information
 
-### optional fields
-utm
-source url
+## Generating an applicant record
 
+An applicant record will be created in applicants module on or after an application is completed. the applicant profile will be updated by the same CGG ID. 
+
+### Required Query Parameters for Initial Event
 ## Custom functions
 
 ### Payment Guard - Hong Kong Travel Insurance
