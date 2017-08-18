@@ -215,6 +215,8 @@ tc_consent | fielf value has to be "true"
 attributes/funnel fiels | CRM have to receive funnel fields and value to display these information
 
 ### optional fields
+Parameter | Description
+--------- | -----------
 utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
 source url | a link for user to retrieve customer last access page and some related information
 
@@ -238,6 +240,8 @@ tc_consent | has to be "true"
 attributes/application_form/application form fields | CRM have to receive additional application form fields and value to display these information
 
 ### optional fields
+Parameter | Description
+--------- | -----------
 utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
 source url | a link for user to retrieve customer last access page and some related information
 
