@@ -199,6 +199,62 @@ attributes/application form/destinations | variable to display in email template
 attributes/application form/phone | variable to display in email template
 
 ## Suite CRM
+## Generating a lead record
+
+A Lead record will be created in Leads Module when customer submit funnel (email/phone submit before apply button click). No update rule applies, the system will create a new record everytime.
+
+### Required Query Parameters for Initial Event
+
+Parameter | Description
+--------- | -----------
+email OR phone | A lead record will be created with email/phone information 
+vertical | Used to identify segmentation config
+locale | Used to identify segmentation config
+attributes/usercityEventName | needs to be "postFromFunnel"
+tc_consent | has to be "true"
+attributes/funnel fiels | CRM have to receive funnel fields and value to display these information
+
+### optional fields
+utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
+source url | a link for user to retrieve customer last access page and some related information
+
+## Generating an application record
+
+An application record will be created in Applications module on or after the event of result page apply button click. the incomplete application will be updated by the same CGG ID+product code. 
+
+### Required Query Parameters for Initial Event
+
+Parameter | Description
+--------- | -----------
+email OR phone | An application record will be created with email/phone information 
+vertical | Used to identify segmentation config
+locale | Used to identify segmentation config
+attributes/usercityEventName | not sure what is required-lixing
+tc_consent | has to be "true"
+attributes/funnel fiels | CRM have to receive funnel fields and value to display these information
+
+### optional fields
+utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
+source url | a link for user to retrieve customer last access page and some related information
+
+## Generating a lead record
+
+A Lead record will be created in Leads Module when customer submit funnel (email/phone submit before apply button click). No update rule applies, the system will create a new record everytime.
+
+### Required Query Parameters for Initial Event
+
+Parameter | Description
+--------- | -----------
+email OR phone | A lead record will be created with email OR phone information 
+vertical | Used to identify segmentation config
+locale | Used to identify segmentation config
+attributes/usercityEventName | needs to be "postFromFunnel"
+tc_consent | has to be "true"
+attributes/funnel fields | all funnel fields and values need to be sent
+
+### optional fields
+utm
+source url
 
 ## Custom functions
 
