@@ -210,8 +210,8 @@ Parameter | Description
 email OR phone | A lead record will be created with email/phone information 
 vertical | Used to identify segmentation config
 locale | Used to identify segmentation config
-attributes/usercityEventName | needs to be "postFromFunnel"
-tc_consent | has to be "true"
+attributes/usercityEventName | field is required, field value needs to be "postFromFunnel"
+tc_consent | fielf value has to be "true"
 attributes/funnel fiels | CRM have to receive funnel fields and value to display these information
 
 ### optional fields
@@ -229,13 +229,13 @@ Parameter | Description
 email OR phone | An application record will be created with email/phone information 
 vertical | Used to identify segmentation config
 locale | Used to identify segmentation config
-attributes/usercityEventName | not sure what is required-lixing
+attributes/usercityEventName | not sure what value is required-lixing
 providerCode | this is required
 providerName | this is required
 productCode | this is required
 productName | this is required
 tc_consent | has to be "true"
-attributes/application_form/application form fields | CRM have to receive application form fields and value to display these information
+attributes/application_form/application form fields | CRM have to receive additional application form fields and value to display these information
 
 ### optional fields
 utm_source, utm_campaign, utm_medium | if a customer is from a marketing platform (FB, Google, email), these fields must present
@@ -245,10 +245,10 @@ source url | a link for user to retrieve customer last access page and some rela
 
 Parameter | Description
 --------- | -----------
-email| the new record need to have the same CGG ID as the record wishing to be updated (same email)  
+email| the new record need to have the same CGG ID as the record wishing to be updated (*1. if email is changed in app form, root email cannot be changed. 2. if email is newly added in app form, the newly added email should be under attributes 3. if only phone number presents, records will be merged by the same phone number)
 vertical | Used to identify segmentation config
 locale | Used to identify segmentation config
-attributes/usercityEventName | not sure what is required-lixing
+attributes/usercityEventName | not sure what value is required-lixing
 providerCode | this is required
 providerName | this is required
 productCode | this field should be the same as the record wishing to be updated
@@ -259,6 +259,8 @@ attributes/application_form/application form fields | CRM have to receive applic
 ## Generating an applicant record
 
 An applicant record will be created in applicants module on or after an application is completed. the applicant profile will be updated by the same CGG ID. 
+
+## Generating a payment record
 
 ### Required Query Parameters for Initial Event
 ## Custom functions
